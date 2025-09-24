@@ -70,12 +70,12 @@ jobs:
         working-directory: action_repo/scripts/npm-release
 
       # Install dependencies
-      - name: Install action dependencies
+      - name: Install dependencies
         run: pnpm install --frozen-lockfile
         working-directory: main_repo
 
       - name: Build
-        run: pnpm build
+        run: pnpm run build
         working-directory: main_repo
 
       - name: Semantic Release
