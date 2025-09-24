@@ -70,8 +70,13 @@ jobs:
         working-directory: action_repo/scripts/npm-release
 
       # Install dependencies
-      - uses: wyvox/action-setup-pnpm@v3
-        with: { node-version: 24 }
+      - name: Install action dependencies
+        run: pnpm install --frozen-lockfile
+        working-directory: main_repo
+
+      - name: Build
+        run: pnpm build
+        working-directory: main_repo
 
       - name: Semantic Release
         id: release
