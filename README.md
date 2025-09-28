@@ -1,7 +1,7 @@
 # github-actions
-Reusable Workflow based on https://github.com/node-modules/github-actions by 
-fengmk2
 
+Reusable Workflow based on https://github.com/node-modules/github-actions by
+fengmk2
 
 ## Usage
 
@@ -30,4 +30,18 @@ jobs:
     uses: scttcper/github-actions/.github/workflows/npm-release.yml@main
     secrets:
       GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+### Optional Inputs
+
+| Name         | Default | Description                                                                 |
+| ------------ | ------- | --------------------------------------------------------------------------- |
+| `dry_run`    | `false` | Pass `--dry-run` to semantic-release to preview changes without publishing. |
+| `skip_build` | `false` | Skip running `pnpm run build` before executing the release.                 |
+
+To skip the build step when calling the workflow:
+
+```yaml
+with:
+  skip_build: true
 ```
