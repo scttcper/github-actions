@@ -79,6 +79,7 @@ jobs:
         run: pnpm install --frozen-lockfile
         working-directory: main_repo
 
+      # Build the project
       - name: Build
         if: ${{ !inputs.skip_build }}
         run: pnpm run build
