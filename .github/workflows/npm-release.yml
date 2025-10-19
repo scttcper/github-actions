@@ -71,7 +71,7 @@ jobs:
 
       # Install action dependencies
       - name: Install action dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install --frozen-lockfile
         working-directory: action_repo/scripts/npm-release
 
       # Install dependencies
