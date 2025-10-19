@@ -2,11 +2,10 @@
   "name": "ci-release",
   "dependencies": {
     "@actions/core": "1.11.1",
-    "@semantic-release/npm": "13.0.0-alpha.15",
-    "semantic-release": "25.0.0-alpha.6"
+    "semantic-release": "25.0.0"
   },
   "devDependencies": {
-    "@types/node": "24.6.2"
+    "@types/node": "24.8.1"
   },
-  "packageManager": "pnpm@10.18.0"
+  "packageManager": "pnpm@10.18.3"
 }
