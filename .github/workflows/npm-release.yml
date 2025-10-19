@@ -43,7 +43,7 @@ jobs:
     steps:
       # Checkout action repository
       - name: Checkout action repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: node-modules/github-actions
           path: action_repo
@@ -51,7 +51,7 @@ jobs:
 
       # Checkout project repository
       - name: Checkout project repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: main_repo
           token: ${{ secrets.GIT_TOKEN }}
@@ -71,7 +71,7 @@ jobs:
 
       # Install action dependencies
       - name: Install action dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
         working-directory: action_repo/scripts/npm-release
 
       # Install dependencies
